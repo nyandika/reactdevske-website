@@ -1,10 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:3000');
 });
 
-test.describe('Test if see more link is clickable', () => {
+test.describe('Events tests', () => {
   test('should navigate to the correct URL when See More is clicked', async ({
     page,
     context,
