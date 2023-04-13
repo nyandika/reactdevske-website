@@ -102,9 +102,11 @@ npm run dev
 - Pro Tip: Explore scripts within `package.json` for more build options
 
 1. Add changes made to the repo addressing an issue
+
 ```
 git add [file_name]
 ```
+
 2. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
 ```
