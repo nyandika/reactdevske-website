@@ -14,27 +14,27 @@
     "validate": "concurrently --kill-others-on-fail -g -p \"[{name}]\" -n \"prettier,lint,typecheck,build\" \"npm:prettier:check -s\" \"npm:lint -s\" \"npm:typecheck -s\" \"npm:build -s -- --no-lint\""
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.3",
+    "@headlessui/react": "^1.7.14",
     "@types/react-google-recaptcha": "^2.1.5",
     "next": "12.3.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-google-recaptcha": "^2.1.0"
   },
   "devDependencies": {
     "@formspree/react": "^2.4.1",
-    "@playwright/test": "1.27.1",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@types/react": "18.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "autoprefixer": "10.4.7",
-    "concurrently": "^7.4.0",
-    "eslint": "8.17.0",
+    "@playwright/test": "1.32.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/react": "18.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "autoprefixer": "10.4.14",
+    "concurrently": "^8.0.1",
+    "eslint": "8.38.0",
     "eslint-config-next": "12.1.6",
-    "eslint-config-prettier": "^8.5.0",
-    "postcss": "8.4.14",
-    "prettier": "^2.7.1",
-    "tailwindcss": "3.1.2",
-    "typescript": "^4.8.4"
+    "eslint-config-prettier": "^8.8.0",
+    "postcss": "8.4.21",
+    "prettier": "^2.8.7",
+    "tailwindcss": "3.3.1",
+    "typescript": "^5.0.4"
   }
 }
