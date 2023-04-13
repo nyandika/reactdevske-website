@@ -12,9 +12,7 @@ export default function MobileHero() {
     <div className="relative">
       <div className="mx-6 pt-2 pb-5 flex justify-between">
         <Link href={HOME}>
-          <a>
-            <Logo size={60} />
-          </a>
+          <Logo size={60} />
         </Link>
         <a
           target="_blank"

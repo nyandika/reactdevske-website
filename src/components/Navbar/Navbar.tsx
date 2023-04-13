@@ -12,9 +12,7 @@ export default function Navbar() {
         <nav className="nav py-4 pl-5 flex flex-col md:flex-row justify-around items-center">
           <div>
             <Link href={HOME}>
-              <a>
-                <Logo size={60} />
-              </a>
+              <Logo size={60} />
             </Link>
           </div>
           <div className="">

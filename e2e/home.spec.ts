@@ -28,7 +28,9 @@ test.describe('Home page tests', () => {
   });
 
   test('should show Events section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Events' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Events', exact: true })
+    ).toBeVisible();
   });
 
   test('should show Contact Us section', async ({ page }) => {

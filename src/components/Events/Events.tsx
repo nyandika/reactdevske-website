@@ -79,8 +79,11 @@ export default function Events() {
         ))}
 
         <div className="flex items-center justify-center pt-1 tracking-wide text-white md:pt-0 md:text-right md:absolute md:bottom-24 md:right-10 2xl:bottom-36 lg:right-16 hover:tracking-widest hover:transition-all hover:duration-500 hover:underline">
-          <Link href="https://kommunity.com/reactjs-developer-community-kenya-reactdevske/events">
-            <a target="_blank">See More</a>
+          <Link
+            href="https://kommunity.com/reactjs-developer-community-kenya-reactdevske/events"
+            target="_blank"
+          >
+            See More
           </Link>
         </div>
       </div>
