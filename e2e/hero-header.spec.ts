@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  page.goto('http://localhost:3000');
+  page.goto('/');
 });
 
 test.describe('Test Hero Header Navigation Links', () => {
