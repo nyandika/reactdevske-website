@@ -1,28 +1,15 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
+
+const baseURL = "http://localhost:3000";
 
 const config: PlaywrightTestConfig = {
   testDir: './e2e',
-  /* Maximum time one test can run for. */
-  timeout: 100 * 1000,
-  expect: {
-    /**
-     * Maximum time expect() should wait for the condition to be met.
-     * For example in `await expect(locator).toHaveText();`
-     */
-    timeout: 5000,
-  },
+  timeout: 30 * 1000,
+  retries: 2,
   workers: 3,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: process.env.CI ? [['github'], ['list'], ['html']] : 'list',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
-    actionTimeout: 0,
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+     baseURL: baseURL,
     trace: 'on-first-retry',
   },
 
@@ -75,7 +62,8 @@ const config: PlaywrightTestConfig = {
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'npm run dev',
-    port: 3000,
+    // port: 3000,
+    url:baseURL,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
   },
