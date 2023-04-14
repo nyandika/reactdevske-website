@@ -1,7 +1,7 @@
 name: End-to-end Tests
 on:
   push:
-    branches: [main, develop]
+    branches: [main, develop, fix-tests-2]
   pull_request:
     branches: [main, develop]
 jobs:

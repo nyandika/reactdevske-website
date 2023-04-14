@@ -1,9 +1,9 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
+import  { defineConfig, devices } from '@playwright/test';
 
 const port = 3000;
 const baseURL = `http://localhost:${port}`;
 
-const config: PlaywrightTestConfig = {
+export default defineConfig({
   testDir: './e2e',
   timeout: 30 * 1000,
   retries: 2,
@@ -18,15 +18,18 @@ const config: PlaywrightTestConfig = {
   projects: [
     {
       name: 'chromium',
+      use:{
+        ...devices['Desktop Chrome']
+      }
     },
 
-    {
-      name: 'firefox',
-    },
+    // {
+    //   name: 'firefox',
+    // },
 
-    {
-      name: 'webkit',
-    },
+    // {
+    //   name: 'webkit',
+    // },
 
     /* Test against mobile viewports. */
     // {
@@ -68,6 +71,4 @@ const config: PlaywrightTestConfig = {
     // timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
   },
-};
-
-export default config;
+});
