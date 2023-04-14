@@ -5,5 +5,9 @@ test('Playwright test', async ({ page }) => {
   // await page.goto('https://www.example.com');
   // const title = await page.title();
   // expect(title).toBe('Example Domain');
+  const title = await page.title();
+  console.log('---------------------------Test log--------------');
+  console.log(title);
+  console.log('---------------------------Test log--------------');
   await expect(page).toHaveTitle(/Reactjs Developer Community in Kenya/);
 });
