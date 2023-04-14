@@ -1,6 +1,7 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 
-const baseURL = "http://localhost:3000";
+const port = 3000;
+const baseURL = `http://localhost:${port}`;
 
 const config: PlaywrightTestConfig = {
   testDir: './e2e',
@@ -9,7 +10,7 @@ const config: PlaywrightTestConfig = {
   workers: 3,
   reporter: process.env.CI ? [['github'], ['list'], ['html']] : 'list',
   use: {
-     baseURL: baseURL,
+    baseURL: baseURL,
     trace: 'on-first-retry',
   },
 
@@ -62,9 +63,9 @@ const config: PlaywrightTestConfig = {
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'npm run dev',
-    // port: 3000,
-    url:baseURL,
-    timeout: 120 * 1000,
+    port: port,
+    // url:baseURL,
+    // timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
   },
 };
