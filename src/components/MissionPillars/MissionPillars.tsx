@@ -17,7 +17,7 @@ export default function MissionPillars() {
               <Image
                 src={'/images/mentorship-image.jpg'}
                 alt="Mentorship Image"
-                layout="fill"
+                fill
               />
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function MissionPillars() {
               <Image
                 src={'/images/learning-image.jpg'}
                 alt="Learning Image"
-                layout="fill"
+                fill
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function MissionPillars() {
                   'https://res.cloudinary.com/reactjs-devs-ke/image/upload/v1678532588/website-images/community-image_pkeqwj.jpg'
                 }
                 alt="Community Image"
-                layout="fill"
+                fill
               />
             </div>
           </div>

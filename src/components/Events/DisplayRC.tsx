@@ -19,8 +19,8 @@ export default function DisplayRC({
         <Image
           alt={description}
           src={!src ? 'https://bit.ly/placeholder-img' : src}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit:'cover'}}
           className={booleanFilter(
             'duration-700 ease-in-out group-hover:opacity-75',
             loading

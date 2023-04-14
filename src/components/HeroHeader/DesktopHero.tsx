@@ -9,8 +9,8 @@ export default function HeroHeader() {
       <Image
         src="https://res.cloudinary.com/reactjs-devs-ke/image/upload/v1678532588/website-images/hero-image_dqpm0k.jpg"
         alt=""
-        objectFit="cover"
-        layout="fill"
+        style={{objectFit:'cover'}}
+        fill
         className="-z-10 fixed top-0 opacity-[0.85] bg-[#333333]"
       />
       <div className="relative">
